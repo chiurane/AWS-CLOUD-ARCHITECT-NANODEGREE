@@ -1,0 +1,8 @@
+# specifying an S3 bucket as a backend is just good practice and durable
+terraform{
+    backend "s3"{
+        bucket = var.back_end_bucket
+        key = var.back_end_bucket_key
+        region = var.aws_region
+    }
+}
