@@ -1,0 +1,13 @@
+AWS Guard Duty picked up 3 things:
+(1) Firstly, it picked up that I tried to SSH into the instance using Root Credentials
+(2) Then it picked up my unauthorised SSHBruteforce attempts on the Web Service Instance
+(3) Its also picked up that the SSHBruteforce attack was coming from the AttackInstance
+
+Guard Duty findings in E3T1_guardduty.png 
+
+The source of information for Guard Duty is:
+Guard Duty uses a number of sources of information to detect unauthorised 
+and unexpected activity in the cloud. These include CloudTrail, Kubernetes audit logs,
+VPC Flow logs and DNS logs. To detect this SSHBruteForce 
+attack it used VPC Flow logs to detect anomolous traffic patterns in the 
+environment.

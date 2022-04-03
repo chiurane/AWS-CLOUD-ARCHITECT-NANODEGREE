@@ -1,0 +1,13 @@
+Notable bad security practices identified include:
+(1) Both the AttackInstance and the RecipeWebServiceInstance have been assigned 
+the InstanceProfileRole so they have the same access to the recource in both buckets.
+Therefore to restrict access different roles must be assigned to these instances.
+(2) InstanceRole is defined such that it can performa any any actions on any 
+of the S3 buckets which clearly doesnt obey the least priviledged access rule
+(3) All the route tables point to 0.0.0.0/0 which means an attacker can transfer 
+information anywhere once inside - we are not limiting the damage once an intruder is inside.
+(4) All Security Groups including WebAppSG, AttackInstanceSG, AppLoadBalanceSG
+have ingress and egress traffic rules configured. They should have different ingress and 
+egress IP at the very least
+(5) I would also introduce an AWS Client VPN Security Group for priviledged
+business users accessing the secrete bucket

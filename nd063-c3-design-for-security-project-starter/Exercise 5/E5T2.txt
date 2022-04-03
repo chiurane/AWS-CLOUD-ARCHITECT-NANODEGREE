@@ -1,0 +1,11 @@
+Queston 1: Identify the tools that will allow us to: 
+(a) scan infrastructure as code templates - regula (https://github.com/fugue/regula). THis is a multi-cloud infrastructure as code evaluation tool.
+Regula can scan AWS CloudFormation templates, Terraform HCL code, Kubernetes manifests and Azure resource managers.
+(b) Scan AMIs or containers for OS vulnerabilities - AWS GuardDuty
+(c) Scan AWS cloud environment for config vulnerabilities - AWS Config 
+
+Question 2:  Example of a compliance violation or vulnerability which each tool might expose
+(a) Regula can find IAM policy violations, for example administrative priviledges
+(b) AWS Guard Duty can identify root credential usage and brute force attacks
+(c)  AWS Config basically scans for all known best practice violations from resources, like S3 bucket access and encryption to IAM roles and priviledges
+

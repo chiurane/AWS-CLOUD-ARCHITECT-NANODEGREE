@@ -1,0 +1,11 @@
+Recommendations on remediating vulnerabilities
+(1) Ensure the default security group of every VPC restricts all traffic
+(2) Ensure no security groups allow ingress from 0.0.0.0/0
+(3) Ensure VPC flow logging is enabled in all VPCs
+(4) Ensure bicket logging enable for free-recipes bucket
+(5) Ensure bucket logging enable for secret-recipes bucket
+(6) Ensure VPCs have a VPC endpoint created for the service 
+(7) Remove UDP port 23 which is reachable with Telnet from the internet for i-042511158d668241
+(8) Remove TCP port 20 which is associated with FTP and is reachable from the internet
+(9) Port range 0 to 65535 reachable from the internet
+(10) Port 80, 5000, 22 reachable from the intenet

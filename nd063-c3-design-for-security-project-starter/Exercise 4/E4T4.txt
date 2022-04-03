@@ -1,0 +1,15 @@
+Question 1 - Architectural change that can be made to reduce the internet facing attack surface of 
+the web application instance.
+Currently the traffic hitting the web application instance is all from the public subnet. We can restrict this further
+by allowing traffic only from the AppLoadBalancerSG security group.
+
+Question 2
+VPC private endpoints uses the private IP address of instance to access the resources needing security and so reduces 
+exposures and attacks from the public internet and this will hence prevent the unauthorized access to the secret buckets
+
+Question 3
+No it doesnt, you have to manually apply default encryption to existing objects.
+
+Question 4
+if the original cloud formation templates applied to the environment then all the changes will be lost as all
+settings revert back to the insecure state.

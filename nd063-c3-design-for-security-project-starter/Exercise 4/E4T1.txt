@@ -1,0 +1,5 @@
+Remedial Action Plan
+(1) 2-3 chnages that can be made to our environment to prevent an SSH bruteforce attack from the internet are
+- remove SSH login with passwords
+- remove the ability to SSH into the host from the internet altogether
+(2) The security policy for the secret bucket should be more restrictive and only allowing access to free recipes
